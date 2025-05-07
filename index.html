@@ -1,26 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>electric-oasis-portal</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="electric-oasis-portal" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>EV Charging Station Management</title>
+    <meta name="description" content="EV Charging Station Management System" />
+    <link rel="stylesheet" href="/src/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <div class="app">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="logo">EV Charge Hub</h1>
+          <button id="mobile-toggle" class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active"><a href="#" data-page="dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#" data-page="stations"><i class="fas fa-map-marker-alt"></i> Stations</a></li>
+            <li><a href="#" data-page="booking"><i class="fas fa-calendar"></i> Bookings</a></li>
+            <li><a href="#" data-page="charging"><i class="fas fa-charging-station"></i> Charging</a></li>
+            <li><a href="#" data-page="profile"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" data-page="admin"><i class="fas fa-cog"></i> Admin</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Page content will be loaded here -->
+        <div id="page-container"></div>
+      </main>
+    </div>
+
+    <!-- JavaScript -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="/src/app.js" type="module"></script>
   </body>
 </html>
